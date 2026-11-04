@@ -1,0 +1,93 @@
+:root {
+  color-scheme: dark;
+  --background: #191919;
+  --panel: #151515;
+  --panel-border: #2b2b2b;
+  --text: #e8e8e8;
+  --muted: #b7b7b7;
+  --quiet: #858585;
+  --blue: #0b84f7;
+  --font: Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 78px; }
+body { margin: 0; background: var(--background); color: var(--text); font: 16px/1.55 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(100% - 48px, 720px); margin-inline: auto; }
+.site-header { position: sticky; top: 0; z-index: 5; background: rgb(25 25 25 / 96%); border-bottom: 1px solid #292929; }
+.nav { min-height: 66px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.wordmark { color: var(--text); font-size: 15px; font-weight: 700; letter-spacing: -.04em; }
+.wordmark span { color: #62b6ff; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a, .back-to-top { color: var(--quiet); font-size: 11px; }
+.nav-links a:hover, .nav-links a:focus-visible, .back-to-top:hover { color: var(--text); }
+.hero { display: flex; align-items: center; flex-direction: column; padding-top: 62px; padding-bottom: 78px; }
+.profile-mark { width: 120px; height: 120px; display: grid; place-items: center; border: 8px solid #fff; border-radius: 50%; background: #191919; color: #f5f5f5; font-size: 73px; font-weight: 600; font-style: italic; letter-spacing: -.12em; line-height: 1; padding-right: 8px; }
+.name-chip { margin: 8px 0 39px; padding: 7px 18px; border: 1px solid #2b2b2b; border-radius: 24px; background: #151515; font-size: 13px; font-weight: 600; }
+.message-thread { width: min(100%, 570px); display: flex; flex-direction: column; gap: 4px; }
+.message { width: fit-content; max-width: 100%; margin: 0; padding: 11px 16px; border-radius: 20px; background: var(--blue); color: #fff; font-size: 16px; line-height: 1.55; }
+.message-short { font-size: 19px; font-weight: 500; }
+.hero-link { margin-top: 24px; color: #9fcfff; font-size: 12px; }
+.hero-link span { margin-left: 6px; }
+.section { padding-top: 48px; padding-bottom: 66px; }
+.section-heading { margin-bottom: 22px; }
+.eyebrow { margin: 0 0 7px; color: #8ebfec; font-size: 9px; font-weight: 600; letter-spacing: .12em; }
+h1, h2, h3, p { margin-top: 0; }
+.section-heading h2, .contact h2 { margin-bottom: 0; font-size: 27px; line-height: 1.25; letter-spacing: -.035em; font-weight: 600; }
+.list-section { padding-top: 46px; padding-bottom: 58px; }
+.list-container { width: min(100% - 48px, 640px); }
+.record-list { display: flex; flex-direction: column; gap: 5px; }
+.record-card { min-height: 91px; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 12px 16px; border: 1px solid var(--panel-border); border-radius: 25px; background: linear-gradient(120deg, #171717, var(--panel)); }
+.record-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 10px; background: #f5f5f5; color: #222; font-size: 9px; font-weight: 700; letter-spacing: -.04em; }
+.icon-urjc, .icon-unnc { background: #fff; }
+.record-icon img { display: block; width: 35px; height: 35px; object-fit: contain; }
+.icon-unnc img { width: 40px; height: 40px; }
+.icon-htb { border: 1px solid #363636; background: #1e1e1e; }
+.icon-htb img { width: 32px; height: 32px; }
+.icon-blue { background: #0b84f7; }
+.icon-blue svg { width: 30px; height: 30px; fill: none; stroke: white; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.record-copy { min-width: 0; }
+.record-copy h3 { margin: 0 0 2px; font-size: 16px; line-height: 1.35; font-weight: 500; }
+.record-copy p { margin: 0; color: #bcbcbc; font-size: 15px; line-height: 1.35; }
+.record-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; color: var(--quiet); font-size: 11px; text-align: right; white-space: nowrap; }
+.goals-section { padding-top: 33px; }
+.goal-card { min-height: 82px; }
+.contact-section { margin-top: 10px; padding: 46px 0 58px; border-top: 1px solid #292929; background: var(--background); color: var(--text); text-align: center; }
+.contact-content { display: flex; align-items: center; flex-direction: column; }
+.contact h2, .contact-content h2 { margin: 0; color: var(--text); font: 600 27px/1.25 var(--font); letter-spacing: -.035em; text-transform: none; }
+.contact-divider { width: 96px; height: 1px; margin: 20px 0 15px; background: #3a3a3a; }
+.contact-intro, .contact-email { max-width: 720px; margin: 0; color: var(--muted); font: 12px/1.7 var(--font); }
+.contact-email { margin-top: 9px; }
+.contact-email a { color: #8ebfec; text-decoration: underline; text-underline-offset: 3px; }
+.contact-email a:hover, .contact-email a:focus-visible { color: #c0e0ff; }
+.footer { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.footer p { margin: 0; color: #797979; font-size: 10px; }
+.footer p span { color: #8ebfec; padding: 0 4px; }
+.back-to-top { font-size: 9px; }
+:focus-visible { outline: 2px solid #8ebfec; outline-offset: 4px; }
+
+@media (max-width: 600px) {
+  .container, .list-container { width: min(100% - 32px, 520px); }
+  .nav { min-height: 74px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 6px; }
+  .nav-links { width: 100%; justify-content: space-between; gap: 8px; }
+  .nav-links a { font-size: 10px; }
+  .hero { padding-top: 50px; padding-bottom: 52px; }
+  .profile-mark { width: 96px; height: 96px; border-width: 7px; font-size: 59px; }
+  .name-chip { margin-bottom: 30px; }
+  .message { padding: 10px 13px; border-radius: 19px; font-size: 14px; }
+  .message-short { font-size: 17px; }
+  .message-thread { gap: 4px; }
+  .section { padding-top: 39px; padding-bottom: 46px; }
+  .list-section { padding-top: 35px; padding-bottom: 40px; }
+  .record-card { grid-template-columns: 45px minmax(0, 1fr); gap: 12px; padding: 11px 12px; border-radius: 20px; }
+  .record-icon { width: 43px; height: 43px; border-radius: 9px; }
+  .record-copy h3 { font-size: 14px; }
+  .record-copy p { font-size: 12px; }
+  .record-meta { grid-column: 2; flex-direction: row; justify-content: flex-start; align-items: center; gap: 8px; font-size: 10px; text-align: left; }
+  .record-meta span + span::before { content: "·"; margin-right: 8px; color: #777; }
+  .contact-section { padding: 39px 0 46px; }
+  .contact-divider { margin: 16px 0 12px; }
+  .footer { flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+  .footer p { flex: 1 1 calc(100% - 55px); order: 3; }
+}
